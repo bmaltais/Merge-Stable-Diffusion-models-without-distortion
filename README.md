@@ -12,3 +12,18 @@ If not in the same directory then
 pathofmodela.ckpt and pathofmodelb.ckpt instead
 
 CPU + GPU works now
+
+## Installation Windows
+
+```powershell
+python -m venv --system-site-packages venv
+.\venv\Scripts\activate
+
+pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
+pip install scipy easygui
+
+```
+
+## Running
+
+`python SD_rebasin_merge.py --model_a nameofmodela.ckpt --model_b nameofmodelb.ckpt`
